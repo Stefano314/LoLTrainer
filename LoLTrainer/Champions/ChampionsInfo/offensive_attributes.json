@@ -1,0 +1,24 @@
+{
+  "Aatrox" : {
+    "AD": 60,
+    "AP": 0,
+    "att_speed": 0.651,
+    "att_range": 175,
+    "AD_growth": 5,
+    "mov_speed": 345,
+    "crit_dmg": 1.75,
+    "crit_%": 0,
+    "AH": 0
+  },
+  "Ahri" : {
+    "AD": 53,
+    "AP": 0,
+    "att_speed": 0.668,
+    "att_range": 550,
+    "AD_growth": 3,
+    "mov_speed": 330,
+    "crit_dmg": 1.75,
+    "crit_%": 0,
+    "AH": 0
+  }
+}

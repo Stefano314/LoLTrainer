@@ -1,0 +1,36 @@
+{
+  "starter_items" : {
+    "Doran's Blade" : {
+      "gold" : 450,
+      "AD" : 8,
+      "HP" : 80,
+      "omnivamp" : 2.5
+    },
+
+    "Dark Seal" : {
+      "gold" : 350,
+      "AP" : 15,
+      "HP" : 40
+    }
+  },
+
+  "basic_items" : {
+    "Amplifying Tome" : {
+      "gold" : 435,
+      "AP" : 20
+    }
+  },
+
+  "epic_items" : {
+    "Aegis of the Legion" : {
+      "gold" : 1400,
+      "AH" : 10,
+      "physical_armor" : 30,
+      "magical_armor" : 30
+    }
+  },
+
+  "legendary_items" : {
+    "MA"
+  }
+}

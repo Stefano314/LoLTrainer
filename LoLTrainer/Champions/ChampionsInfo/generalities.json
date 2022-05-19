@@ -1,0 +1,16 @@
+{
+  "Aatrox" : {
+    "class": ["Fighter", "Tank"],
+    "positions": ["Top", "Middle"],
+    "range_type": "Melee",
+    "latest_patch": "V12.7"
+  },
+
+  "Ahri" : {
+    "class" : ["Mage", "Assassin"],
+    "positions" : ["Middle"],
+    "range_type" : "Ranged",
+    "latest_patch" : "V12.9"
+  }
+
+}

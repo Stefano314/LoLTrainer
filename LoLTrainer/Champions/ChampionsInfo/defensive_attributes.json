@@ -1,0 +1,26 @@
+{
+  "Aatrox" : {
+    "HP": 580,
+    "HP_growth": 90,
+    "mana": null,
+    "mana_growth": null,
+    "HP_regen": 3,
+    "HP_regen_growth": 1,
+    "mana_regen": null,
+    "mana_regen_growth": null,
+    "physical_armor": 38,
+    "magical_armor": 32
+  },
+  "Ahri" : {
+    "HP": 500,
+    "HP_growth": 82,
+    "mana": 418,
+    "mana_growth": 25,
+    "HP_regen": 2.5,
+    "HP_regen_growth": 0.6,
+    "mana_regen": 1.6,
+    "mana_regen_growth": 0.16,
+    "physical_armor": 18,
+    "magical_armor": 30
+  }
+}
