@@ -1,36 +1,111 @@
 {
-  "starter_items" : {
+
     "Doran's Blade" : {
-      "gold" : 450,
-      "AD" : 8,
-      "HP" : 80,
-      "omnivamp" : 2.5
+      "name": "Doran's Blade",
+      "gold": 450,
+      "AD": 8,
+      "HP": 80,
+      "omnivamp": 0.025
     },
 
     "Dark Seal" : {
+      "name" : "Dark Seal",
       "gold" : 350,
       "AP" : 15,
       "HP" : 40
-    }
-  },
+    },
 
-  "basic_items" : {
+    "Doran's Ring" : {
+      "name" : "Doran's Ring",
+      "gold" : 400,
+      "AP" : 15,
+      "HP" : 80
+    },
+
+    "Doran's Shield" : {
+      "name" : "Doran's Shield",
+      "gold" : 450,
+      "AP" : 15,
+      "HP" : 70,
+      "HP_regen" : 1.2
+    },
+
+    "Tear of the Goddess" : {
+      "name" : "Tear of the Goddess",
+      "gold": 400,
+      "mana": 240
+    },
+
+    "Emberknife" : {
+      "name" : "Emberknife",
+      "gold": 350
+    },
+
+    "Hailblade" : {
+      "name" : "Hailblade",
+      "gold": 350
+    },
+
+
+
+
     "Amplifying Tome" : {
+      "name" : "Amplifying Tome",
       "gold" : 435,
       "AP" : 20
-    }
-  },
+    },
 
-  "epic_items" : {
+
+
+
+
     "Aegis of the Legion" : {
+      "name" : "Aegis of the Legion",
       "gold" : 1400,
       "AH" : 10,
       "physical_armor" : 30,
       "magical_armor" : 30
-    }
-  },
+    },
 
-  "legendary_items" : {
-    "MA"
-  }
+
+
+
+
+    "Abyssal Mask": {
+      "name" : "Abyssal Mask",
+      "gold": 2700,
+      "AH": 10,
+      "HP": 450,
+      "magical_armor": 30
+    },
+    "Anathema's Chains" : {
+      "name" : "Anathema's Chains",
+      "gold": 2500,
+      "AH": 20,
+      "HP": 650
+    },
+    "Archangel's Staff" : {
+      "name" : "Archangel's Staff",
+      "gold": 2600,
+      "AP": 60,
+      "HP": 200,
+      "mana": 500,
+      "AH": [0.5, "Bonus mana %"]
+    },
+
+
+
+
+
+    "Crown of the Shattered Queen" : {
+      "name" : "Crown of the Shattered Queen",
+      "gold": 2800,
+      "AP": 60,
+      "HP": 250,
+      "mana": 600,
+      "AH": 20
+    }
+
+
+
 }

@@ -1,6 +1,6 @@
 
 from .ChampionsInfo.attributes import get_attributes, clear_cache
-
+from LoLTrainer.Trainer.processing import check_items
 from LoLTrainer.Items.items import get_item
 
 class LoLChampions():
@@ -9,19 +9,21 @@ class LoLChampions():
     -----------
     League of Legends champions class.
     This will initialize all champions in the game, giving them their base attributes.
-    Once the champion is created,  its stats will change according to the level and to the items equipped.
+    Once the champion is created, its stats will change according to the level and to the items equipped.
 
     '''
 
-    def __init__(self,  ID : str):
+    def __init__(self,  name : str):
 
         # PRIVATE
-        self._off_attributes = get_attributes(file_name = 'offensive_attributes', ID = ID)
-        self._def_attributes = get_attributes(file_name ='defensive_attributes', ID = ID)
-        self._abi_attributes = get_attributes(file_name ='abilities_attributes', ID = ID)
-        self._generalities = get_attributes(file_name ='generalities', ID = ID)
+        self._off_attributes = get_attributes(filename = 'offensive_attributes', key = name)
+        self._def_attributes = get_attributes(filename = 'defensive_attributes', key = name)
+        self._abi_attributes = get_attributes(filename = 'abilities_attributes', key = name)
+        self._generalities = get_attributes(filename = 'generalities', key = name)
 
         # PUBLIC:
+
+        # Generic stats
         self.lvl = 1
         self.HP = self._def_attributes['HP']
         self.AP = self._off_attributes['AP']
@@ -30,12 +32,16 @@ class LoLChampions():
         self.Ma_armor = self._def_attributes['magical_armor']
         self.mana = self._def_attributes['mana']
 
+        # Additional stats
         self.lethality = 0
         self.armor_penetration = 0
         self.omivamp = 0
         self.life_steal = 0
 
-    def level_up(self, lvl : int = 0) -> None :
+        # Items
+        self.items = []
+
+    def level_up(self, lvl : int = 0) -> None:
         """
         Description
         -----------
@@ -64,6 +70,17 @@ class LoLChampions():
             self.mana = self._def_attributes['mana'] + self._def_attributes['mana_growth'] * \
                         (self.lvl - 1) * (0.7025 + 0.0175 * (self.lvl - 1))
 
-    def item_upgrade(self):
-        # Probably it's better to put flags on every item
-        pass
+    def update_champ(self) -> None:
+
+        self.level_up(self.lvl)
+        self.item_upgrade(check_items())
+
+    def remove_item(self, item) -> None:
+
+        if item in self.items:
+            self.items.remove(item)
+        self.update_champ()
+
+    def item_upgrade(self, item : list) -> None:
+
+        self.items.append(get_item(item))

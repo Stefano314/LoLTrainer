@@ -19,7 +19,7 @@ def clear_cache(key):
     if key in _cache:
         _cache.pop(key)
 
-def load_file(file_category : str) -> dict:
+def load_file(filename : str) -> dict:
     """
     Description
     -----------
@@ -33,15 +33,15 @@ def load_file(file_category : str) -> dict:
 
     """
 
-    key = file_category
+    key = filename
     if key not in _cache:
-        with open(INFO_PATH+file_category+'.json') as file:
+        with open(INFO_PATH+filename+'.json') as file:
             _cache[key] = json.load(file)
 
     return _cache[key]
 
 
-def get_attributes(file_name : str, ID : str):
+def get_attributes(filename : str, key : str):
     """
     Description
     -----------
@@ -57,4 +57,4 @@ def get_attributes(file_name : str, ID : str):
 
     """
 
-    return load_file(file_name)[ID]
+    return load_file(filename)[key]
