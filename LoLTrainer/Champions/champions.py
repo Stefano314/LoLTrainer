@@ -42,7 +42,7 @@ class LoLChampions:
         # Additional stats
         self.lethality = 0
         self.armor_penetration = 0
-        self.omivamp = 0
+        self.omnivamp = 0
         self.life_steal = 0
         self.gold = 0
 
@@ -85,15 +85,19 @@ class LoLChampions:
             self.mana = self._def_attributes['mana'] + self._def_attributes['mana_growth'] * \
                         (self.lvl - 1) * (0.7025 + 0.0175 * (self.lvl - 1))
 
+
     def update_champ(self) -> None:
         """
         Description
         -----------
         Re-evaluates all the stats of the champ.
+
         """
+
         self.level_up(self.lvl)
         self.item_upgrade(check_items())
         self.evaluate_stats()
+
 
     def remove_items(self, item : list) -> None:
 
@@ -109,6 +113,7 @@ class LoLChampions:
 
         except:
             print(f"- WARNING: {item} item(s) not found!")
+
 
     def item_upgrade(self, item : list) -> None:
 

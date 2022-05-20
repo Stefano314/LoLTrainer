@@ -74,7 +74,7 @@ def generate_items_template():
         "mana": 0,
         "lethality": 0,
         "armor_penetration": 0,
-        "omivamp": 0,
+        "omnivamp": 0,
         "life_steal": 0,
         "BONUS": {{}}
     }},
@@ -98,7 +98,7 @@ def generate_items_template():
         "mana": 0,
         "lethality": 0,
         "armor_penetration": 0,
-        "omivamp": 0,
+        "omnivamp": 0,
         "life_steal": 0,
         "BONUS": {{}}
     }},
@@ -122,7 +122,7 @@ def generate_items_template():
         "mana": 0,
         "lethality": 0,
         "armor_penetration": 0,
-        "omivamp": 0,
+        "omnivamp": 0,
         "life_steal": 0,
         "BONUS": {{}}
     }},
@@ -145,7 +145,7 @@ def generate_items_template():
         "mana": 0,
         "lethality": 0,
         "armor_penetration": 0,
-        "omivamp": 0,
+        "omnivamp": 0,
         "life_steal": 0,
         "BONUS": {{}}
     }},
@@ -168,7 +168,7 @@ def generate_items_template():
         "mana": 0,
         "lethality": 0,
         "armor_penetration": 0,
-        "omivamp": 0,
+        "omnivamp": 0,
         "life_steal": 0,
         "BONUS": {{}}
     }},
@@ -191,7 +191,7 @@ def generate_items_template():
         "mana": 0,
         "lethality": 0,
         "armor_penetration": 0,
-        "omivamp": 0,
+        "omnivamp": 0,
         "life_steal": 0,
         "BONUS": {{}}
     }},

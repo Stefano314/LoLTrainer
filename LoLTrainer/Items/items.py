@@ -109,7 +109,7 @@ class LoLItems:
         self.mana = self._items_stats['mana']
         self.lethality = self._items_stats['lethality']
         self.armor_penetration = self._items_stats['armor_penetration']
-        self.omivamp = self._items_stats['omivamp']
+        self.omnivamp = self._items_stats['omivamp']
         self.life_steal = self._items_stats['life_steal']
         self.bonus = self._items_stats['BONUS']
 
