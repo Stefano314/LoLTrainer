@@ -1,9 +1,11 @@
 
 from .ChampionsInfo.attributes import get_attributes, clear_cache
 from LoLTrainer.Trainer.processing import check_items
-from LoLTrainer.Items.items import get_item
+from LoLTrainer.Items.items import get_items
 
-class LoLChampions():
+
+class LoLChampions:
+
     '''
     Description
     -----------
@@ -21,9 +23,13 @@ class LoLChampions():
         self._abi_attributes = get_attributes(filename = 'abilities_attributes', key = name)
         self._generalities = get_attributes(filename = 'generalities', key = name)
 
+        # Items hold, it's here because of its function. To check items we have the property.
+        self._items = []
+
         # PUBLIC:
 
         # Generic stats
+        self.name = name
         self.lvl = 1
         self.HP = self._def_attributes['HP']
         self.AP = self._off_attributes['AP']
@@ -37,9 +43,17 @@ class LoLChampions():
         self.armor_penetration = 0
         self.omivamp = 0
         self.life_steal = 0
+        self.gold = 0
 
-        # Items
-        self.items = []
+
+    @property
+    def items(self):
+        items = self._items
+        if isinstance(items, list):
+            return [i.name for i in items]
+        else:
+            return items.name
+
 
     def level_up(self, lvl : int = 0) -> None:
         """
@@ -71,9 +85,14 @@ class LoLChampions():
                         (self.lvl - 1) * (0.7025 + 0.0175 * (self.lvl - 1))
 
     def update_champ(self) -> None:
-
+        """
+        Description
+        -----------
+        Re-evaluates all the stats of the champ
+        """
         self.level_up(self.lvl)
         self.item_upgrade(check_items())
+        self.evaluate_stats()
 
     def remove_item(self, item) -> None:
 
@@ -83,4 +102,9 @@ class LoLChampions():
 
     def item_upgrade(self, item : list) -> None:
 
-        self.items.append(get_item(item))
+        self._items = get_items(item)
+
+
+    def evaluate_stats(self):
+        pass
+
