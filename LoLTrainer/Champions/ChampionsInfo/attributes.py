@@ -19,7 +19,7 @@ def clear_cache(key):
     if key in _cache:
         _cache.pop(key)
 
-def load_file(filename : str) -> dict:
+def _load_file(filename : str) -> dict:
     """
     Description
     -----------
@@ -57,4 +57,4 @@ def get_attributes(filename : str, key : str):
 
     """
 
-    return load_file(filename)[key]
+    return _load_file(filename)[key]
