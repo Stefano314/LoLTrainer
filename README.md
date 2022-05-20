@@ -9,7 +9,7 @@ This software is strongly dependent on
 
 LoLTrainer Purpose
 ------------------
-The main reason behind this project is because I didn't want to use League of Legends official
+The main reason behind this project is that I didn't want to use League of Legends official
 [API](https://developer.riotgames.com/) (for obvious reasons). In addition, I'm having a lot of
 fun!
 
