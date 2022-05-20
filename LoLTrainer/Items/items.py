@@ -74,10 +74,14 @@ def get_items(keys : list):
     keys : list
         Objects names.
 
+    Return
+    ------
+    list : List of LoLItems objects
+
     """
 
     if isinstance(keys, str):
-        return LoLItems(name = keys)
+        return [LoLItems(name = keys)]
 
     else:
         return [LoLItems(name = key) for key in keys]
@@ -109,7 +113,7 @@ class LoLItems:
         self.mana = self._items_stats['mana']
         self.lethality = self._items_stats['lethality']
         self.armor_penetration = self._items_stats['armor_penetration']
-        self.omnivamp = self._items_stats['omivamp']
+        self.omnivamp = self._items_stats['omnivamp']
         self.life_steal = self._items_stats['life_steal']
         self.bonus = self._items_stats['BONUS']
 
