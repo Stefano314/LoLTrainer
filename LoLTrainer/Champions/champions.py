@@ -1,3 +1,4 @@
+import numpy as np
 
 from .ChampionsInfo.attributes import get_attributes, clear_cache
 from LoLTrainer.Trainer.processing import check_items
@@ -52,7 +53,7 @@ class LoLChampions:
         if isinstance(items, list):
             return [i.name for i in items]
         else:
-            return items.name
+            return [items.name]
 
 
     def level_up(self, lvl : int = 0) -> None:
@@ -88,17 +89,26 @@ class LoLChampions:
         """
         Description
         -----------
-        Re-evaluates all the stats of the champ
+        Re-evaluates all the stats of the champ.
         """
         self.level_up(self.lvl)
         self.item_upgrade(check_items())
         self.evaluate_stats()
 
-    def remove_item(self, item) -> None:
+    def remove_items(self, item : list) -> None:
 
-        if item in self.items:
-            self.items.remove(item)
-        self.update_champ()
+        if isinstance(item, str):
+            item = [item]
+
+        try:
+            _items_hold = np.array([i.name for i in self._items])
+            names_to_remove = np.array(self._items)[np.where(np.in1d(_items_hold, item))[0]]
+
+            for name in names_to_remove:
+                self._items.remove(name)
+
+        except:
+            print(f"- WARNING: {item} item(s) not found!")
 
     def item_upgrade(self, item : list) -> None:
 
