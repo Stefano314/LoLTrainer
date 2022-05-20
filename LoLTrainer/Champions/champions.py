@@ -49,11 +49,21 @@ class LoLChampions:
 
     @property
     def items(self):
+        """
+        Description
+        -----------
+        Get all the current items hold by the champion.
+
+        Return
+        ------
+        list : Items hold list.
+
+        """
+
         items = self._items
         if isinstance(items, list):
             return [i.name for i in items]
-        else:
-            return [items.name]
+
 
 
     def level_up(self, lvl : int = 0) -> None:
@@ -100,6 +110,12 @@ class LoLChampions:
 
 
     def remove_items(self, item : list) -> None:
+        """
+        Description
+        -----------
+        Remove a given set of items from the champion inventory.
+
+        """
 
         if isinstance(item, str):
             item = [item]
