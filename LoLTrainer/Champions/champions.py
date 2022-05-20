@@ -48,6 +48,26 @@ class LoLChampions:
 
 
     @property
+    def stats(self):
+        """
+        Description
+        -----------
+        Get all current stats values of the champion.
+
+        Return
+        ------
+        list : Champion stats list.
+
+        """
+
+        stats = [self.lvl, self.HP, self.AP, self.AD, self.Ph_armor, self.Ma_armor, self.mana,
+                 self.lethality, self.armor_penetration, self.omnivamp, self.life_steal, self.gold]
+
+        return stats
+
+
+
+    @property
     def items(self):
         """
         Description
@@ -132,9 +152,17 @@ class LoLChampions:
 
 
     def item_upgrade(self, item : list) -> None:
+        """
+        Description
+        -----------
+        Extend the items hold by the champion.
 
-        self._items = get_items(item)
+        """
 
+        if len(self._items) < 6:
+            self._items.extend(get_items(item))
+        else:
+            print("- WARNING: exceeding maximum number of items hold.")
 
     def evaluate_stats(self):
         pass
