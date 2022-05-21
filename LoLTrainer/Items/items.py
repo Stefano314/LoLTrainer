@@ -1,9 +1,13 @@
 import json
 import os
+from PIL import Image
+import numpy as np
+
 
 __all__ = ['LoLItems', 'get_items']
 
 INFO_PATH = os.path.join(os.getcwd(), 'LoLTrainer', 'Items', '')
+ITEMS_IMAGES_PATH = os.path.join(os.getcwd(), 'Images', 'Items', '')
 
 # Cache global variable for .json
 _cache = dict()
@@ -38,7 +42,7 @@ def _load_item(filename : str = 'items'):
     return _cache[key]
 
 
-def _get_item(keys : str, filename : str = 'items'):
+def _get_item(key : str, filename : str = 'items'):
     """
     Description
     -----------
@@ -47,7 +51,7 @@ def _get_item(keys : str, filename : str = 'items'):
 
     Parameters
     ----------
-    keys : str
+    key : str
         Selects the entry in the .json file, which correspond to a single specific item.
     filename :str
         Name of the .json file. At the moment we only have 'items.json'.
@@ -59,7 +63,36 @@ def _get_item(keys : str, filename : str = 'items'):
     """
 
     items = _load_item(filename)
-    return items.get(keys)
+    return items.get(key)
+
+
+def _link_to_image(key : str) -> str:
+    """
+    Description
+    -----------
+    Check if the item name is found inside Images/Items folder.
+    If the image exists, then its path is returned.
+
+    Parameters
+    ----------
+    key : str
+        Name of the item.
+
+    Returns
+    -------
+    str : Path of the image.
+
+    """
+
+    img_name = ''.join((key, '.png'))
+
+    if img_name in os.listdir(ITEMS_IMAGES_PATH):
+
+        return os.path.join(ITEMS_IMAGES_PATH, img_name)
+
+    else:
+        print(f"-WARNING: image {img_name} not found!\n")
+        return None
 
 
 def get_items(keys : list):
@@ -100,7 +133,8 @@ class LoLItems:
 
     def __init__(self, name: str):
         # PRIVATE
-        self._items_stats = _get_item(filename = 'items', keys = name)
+        self._items_stats = _get_item(filename = 'items', key = name)
+        self._image = None
 
         # PUBLIC:
         self.name = self._items_stats['name']
@@ -117,3 +151,14 @@ class LoLItems:
         self.life_steal = self._items_stats['life_steal']
         self.bonus = self._items_stats['BONUS']
 
+    @property
+    def item_image(self):
+        """
+        Description
+        -----------
+        Conversion from PIL.Image object to numpy array.
+        """
+
+        image = _link_to_image(key = self.name)
+        self._image = np.asarray(Image.open(image).convert("L")).astype(np.int8)
+        return self._image

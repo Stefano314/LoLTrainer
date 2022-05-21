@@ -2,6 +2,7 @@ import requests
 import os
 
 ITEM_IMAGES_PATH = os.path.join(os.getcwd(), 'Images', 'Items', '')
+
 def get_item_images():
 
     site_content = requests.get('https://leagueoflegends.fandom.com/wiki/List_of_items').text.split('"')
@@ -23,7 +24,7 @@ def get_item_images():
 
                 # Save names
                 img_name = images_names[i][pos - 1].replace("%27", "\'").replace("_item", '').replace("_", " ")
-                f1.write(img_name)
+                f1.write(f'"{img_name}"')
                 f1.write(", ")
 
                 # Save images

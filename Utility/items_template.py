@@ -1,3 +1,4 @@
+import requests
 
 def generate_items_template():
     """
@@ -5,6 +6,7 @@ def generate_items_template():
     Remember to remove the comma at the very end of the template.
 
     """
+
     starter_items = ['Cull', 'Dark Seal', "Doran's Blade", "Doran's Ring", "Doran's Shield", 'Emberknife',
                      'Hailblade', "Guardian's Blade", "Guardian's Hammer", "Guardian's Horn", "Guardian's Orb",
                      'Relic Shield', 'Spectral Sickle', "Spellthief's Edge", "Steel Shoulderguards",
