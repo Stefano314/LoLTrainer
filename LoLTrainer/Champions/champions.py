@@ -1,7 +1,7 @@
 import numpy as np
 
 from .ChampionsInfo.attributes import get_attributes, clear_cache
-from LoLTrainer.Trainer.processing import check_items
+from LoLTrainer.Trainer.processing import item_recognizer
 from LoLTrainer.Items.items import get_items
 
 
@@ -125,7 +125,7 @@ class LoLChampions:
         """
 
         self.level_up(self.lvl)
-        self.item_upgrade(check_items())
+        # self.item_upgrade(item_recognizer())
         self.evaluate_stats()
 
 
