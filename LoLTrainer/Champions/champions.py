@@ -165,16 +165,24 @@ class LoLChampions:
             print("- WARNING: exceeding maximum number of items hold.")
 
     def evaluate_stats(self):
-        self.HP = self._def_attributes["HP"]+np.sum([item.HP for item in self._items if isinstance(item, LoLItems)])
-        self.AP = self._off_attributes["AP"]+np.sum([item.AP for item in self._items if isinstance(item, LoLItems)])
-        self.AD = self._off_attributes["AD"]+np.sum([item.AD for item in self._items if isinstance(item, LoLItems)])
-        self.Ph_armor = self._def_attributes["physical_armor"]+np.sum([item.Ph_armor for item in self._items if isinstance(item, LoLItems)])
-        self.Ma_armor = self._def_attributes["magical_armor"]+np.sum([item.Ma_armor for item in self._items if isinstance(item, LoLItems)])
-        self.mana = self._def_attributes["mana"]+np.sum([item.mana for item in self._items if isinstance(item, LoLItems)])
-        self.lethality = self._off_attributes["lethality"]+np.sum([item.lethality for item in self._items if isinstance(item, LoLItems)])
-        self.armor_penetration = self._off_attributes["armor_penetration"]+np.sum([item.armor_penetration for item in self._items if isinstance(item, LoLItems)])
-        self.omnivamp = self._off_attributes["omnivamp"]+np.sum([item.omnivamp for item in self._items if isinstance(item, LoLItems)])
-        self.life_steal = self._off_attributes["life_steal"]+np.sum([item.life_steal for item in self._items if isinstance(item, LoLItems)])
+        """
+        Description
+        -----------
+        Calculate and substitute every stat value according to the items hold
+        by the champion.
 
-        pass
+        """
+
+        self.level_up(lvl = self.lvl)
+
+        self.HP += np.sum([item.HP for item in self._items if isinstance(item, LoLItems)])
+        self.AP += np.sum([item.AP for item in self._items if isinstance(item, LoLItems)])
+        self.AD += np.sum([item.AD for item in self._items if isinstance(item, LoLItems)])
+        self.Ph_armor += np.sum([item.Ph_armor for item in self._items if isinstance(item, LoLItems)])
+        self.Ma_armor += np.sum([item.Ma_armor for item in self._items if isinstance(item, LoLItems)])
+        self.mana += np.sum([item.mana for item in self._items if isinstance(item, LoLItems)])
+        self.lethality += np.sum([item.lethality for item in self._items if isinstance(item, LoLItems)])
+        self.armor_penetration += np.sum([item.armor_penetration for item in self._items if isinstance(item, LoLItems)])
+        self.omnivamp += np.sum([item.omnivamp for item in self._items if isinstance(item, LoLItems)])
+        self.life_steal += np.sum([item.life_steal for item in self._items if isinstance(item, LoLItems)])
 
