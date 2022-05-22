@@ -2,8 +2,7 @@ import numpy as np
 
 from .ChampionsInfo.attributes import get_attributes, clear_cache
 from LoLTrainer.Trainer.processing import item_recognizer
-from LoLTrainer.Items.items import get_items
-
+from LoLTrainer.Items.items import get_items, LoLItems
 
 class LoLChampions:
 
@@ -161,9 +160,21 @@ class LoLChampions:
 
         if len(self._items) < 6:
             self._items.extend(get_items(item))
+            self.evaluate_stats()
         else:
             print("- WARNING: exceeding maximum number of items hold.")
 
     def evaluate_stats(self):
+        self.HP = self._def_attributes["HP"]+np.sum([item.HP for item in self._items if isinstance(item, LoLItems)])
+        self.AP = self._off_attributes["AP"]+np.sum([item.AP for item in self._items if isinstance(item, LoLItems)])
+        self.AD = self._off_attributes["AD"]+np.sum([item.AD for item in self._items if isinstance(item, LoLItems)])
+        self.Ph_armor = self._def_attributes["physical_armor"]+np.sum([item.Ph_armor for item in self._items if isinstance(item, LoLItems)])
+        self.Ma_armor = self._def_attributes["magical_armor"]+np.sum([item.Ma_armor for item in self._items if isinstance(item, LoLItems)])
+        self.mana = self._def_attributes["mana"]+np.sum([item.mana for item in self._items if isinstance(item, LoLItems)])
+        self.lethality = self._off_attributes["lethality"]+np.sum([item.lethality for item in self._items if isinstance(item, LoLItems)])
+        self.armor_penetration = self._off_attributes["armor_penetration"]+np.sum([item.armor_penetration for item in self._items if isinstance(item, LoLItems)])
+        self.omnivamp = self._off_attributes["omnivamp"]+np.sum([item.omnivamp for item in self._items if isinstance(item, LoLItems)])
+        self.life_steal = self._off_attributes["life_steal"]+np.sum([item.life_steal for item in self._items if isinstance(item, LoLItems)])
+
         pass
 
