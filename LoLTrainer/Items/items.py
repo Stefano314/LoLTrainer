@@ -160,5 +160,5 @@ class LoLItems:
         """
 
         image = _link_to_image(key = self.name)
-        self._image = np.asarray(Image.open(image).convert("L")).astype(np.int8)
+        self._image = np.asarray(Image.open(image).convert("L"))
         return self._image
