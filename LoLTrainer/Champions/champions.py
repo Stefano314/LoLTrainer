@@ -180,7 +180,12 @@ class LoLChampions:
         self.AD += np.sum([item.AD for item in self._items if isinstance(item, LoLItems)])
         self.Ph_armor += np.sum([item.Ph_armor for item in self._items if isinstance(item, LoLItems)])
         self.Ma_armor += np.sum([item.Ma_armor for item in self._items if isinstance(item, LoLItems)])
-        self.mana += np.sum([item.mana for item in self._items if isinstance(item, LoLItems)])
+
+        if self.mana is None:
+            pass
+        else:
+            self.mana += np.sum([item.mana for item in self._items if isinstance(item, LoLItems)])
+
         self.lethality += np.sum([item.lethality for item in self._items if isinstance(item, LoLItems)])
         self.armor_penetration += np.sum([item.armor_penetration for item in self._items if isinstance(item, LoLItems)])
         self.omnivamp += np.sum([item.omnivamp for item in self._items if isinstance(item, LoLItems)])
