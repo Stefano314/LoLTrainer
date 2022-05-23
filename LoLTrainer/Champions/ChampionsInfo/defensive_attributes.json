@@ -1,26 +1,2402 @@
 {
-  "Aatrox" : {
-    "HP": 580,
-    "HP_growth": 90,
-    "mana": null,
-    "mana_growth": null,
-    "HP_regen": 3,
-    "HP_regen_growth": 1,
-    "mana_regen": null,
-    "mana_regen_growth": null,
-    "physical_armor": 38,
-    "magical_armor": 32
-  },
-  "Ahri" : {
-    "HP": 500,
-    "HP_growth": 82,
-    "mana": 418,
-    "mana_growth": 25,
-    "HP_regen": 2.5,
-    "HP_regen_growth": 0.6,
-    "mana_regen": 1.6,
-    "mana_regen_growth": 0.16,
-    "physical_armor": 18,
-    "magical_armor": 30
-  }
+
+    "Aatrox" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Ahri" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Akali" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Akshan" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Alistar" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Amumu" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Anivia" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Annie" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Aphelios" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Ashe" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Aurelion Sol" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Azir" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Bard" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Blitzcrank" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Brand" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Braum" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Caitlyn" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Camille" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Cassiopeia" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Cho'Gath" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Corki" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Darius" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Diana" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Dr. Mundo" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Draven" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Ekko" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Elise" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Evelynn" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Ezreal" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Fiddlesticks" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Fiora" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Fiora" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Fizz" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Galio" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Gangplank" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Garen" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Gnar" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Gragas" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Graves" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Gwen" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Hecarim" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Heimerdinger" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Illaoi" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Irelia" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Ivern" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Janna" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Jarvan IV" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Jax" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Jayce" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Jhin" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Jinx" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Kai'Sa" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Kalista" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Karma" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Karthus" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Kassadin" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Katarina" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Kayle" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Kayn" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Kennen" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Kha'Zix" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Kindred" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Kled" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Kog'Maw" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "LeBlanc" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Lee Sin" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Leona" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Lillia" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Lissandra" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Lucian" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Lulu" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Lux" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Malphite" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Malzahar" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Maokai" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Master Yi" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Miss Fortune" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Mordekaiser" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Morgana" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Nami" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Nasus" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Nautilus" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Neeko" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Nidalee" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Nocturne" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Nunu & Willump" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Olaf" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Orianna" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Ornn" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Pantheon" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Poppy" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Pyke" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Qiyana" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Quinn" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Rakan" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Rammus" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Rek'Sai" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Rell" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Renata Glasc" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Renekton" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Rengar" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Riven" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Rumble" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Ryze" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Samira" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Sejuani" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Senna" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Seraphine" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Sett" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Shaco" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Shen" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Shyvana" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Singed" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Sion" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Sivir" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Skarner" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Sona" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Soraka" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Swain" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Sylas" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Syndra" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Tahm Kench" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Taliyah" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Talon" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Taric" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Teemo" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Thresh" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Tristana" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Trundle" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Tryndamere" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Twisted Fate" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Twitch" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Udyr" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Urgot" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Varus" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Vayne" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Veigar" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Vel'Koz" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Vex" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Vi" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Viego" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Viktor" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Vladimir" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Volibear" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Warwick" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Wukong" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Xayah" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Xerath" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Xin Zhao" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Yasuo" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Yone" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Yorick" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Yuumi" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Zac" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Zed" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Zeri" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Zeri" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Zilean" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Zoe" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    },
+
+
+    "Zyra" : {
+        "HP": 0,
+        "HP_growth": 0,
+        "mana": 0,
+        "mana_growth": 0,
+        "HP_regen": 0,
+        "HP_regen_growth": 0,
+        "mana_regen": 0,
+        "mana_regen_growth": 0,
+        "physical_armor": 0,
+        "magical_armor": 0,
+        "tenacity": 0
+    }
+
 }
