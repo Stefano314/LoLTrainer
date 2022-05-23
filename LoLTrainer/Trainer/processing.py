@@ -5,12 +5,10 @@ import os
 
 from skimage.filters import threshold_otsu
 
-# import matplotlib
-# import matplotlib.pyplot as plt
 
 ITEMS_IMAGES_PATH = os.path.join(os.getcwd(), 'Images', 'Items', '')
 
-__all__ = ['image_comparison', 'item_recognizer', 'get_hold_items']
+__all__ = ['item_recognizer']
 
 def _screen_acquisition():
 
@@ -27,11 +25,12 @@ def _screen_acquisition():
     return screen_array
 
 
-def get_hold_items(screen: np.array) -> list:
+def _get_hold_items(screen: np.array) -> list:
     """
     Description
     -----------
-    Subdivide the portion of the screen into 6 bunches, where items are hold in game by the champion.
+    Subdivide the portion of the screen into 6 bunches, where
+    items are hold in game by the champion.
 
     Parameters
     ----------
@@ -51,7 +50,7 @@ def get_hold_items(screen: np.array) -> list:
     return [screen[947 + y:987 + y, 1131 + x:1171 + x] for y in y_step for x in x_step]
 
 
-def image_comparison(img_items_list : list) -> list:
+def _image_comparison(img_items_list : list) -> list:
     """
     Description
     -----------
@@ -69,6 +68,11 @@ def image_comparison(img_items_list : list) -> list:
     """
 
     result = []
+
+    # Must use img_names because some files are not recognized, so the position shifts
+    img_names = []
+
+    # .png files in dir
     images = [img for img in os.listdir(ITEMS_IMAGES_PATH) if img.endswith('.png')]
 
     try:
@@ -76,18 +80,11 @@ def image_comparison(img_items_list : list) -> list:
         # Compare each bunch ...
         for img_array in img_items_list:
 
-            # plt.matshow(img_array, cmap = matplotlib.cm.Greys_r)
-            # plt.axis('off')
-            # plt.title('Screenshot Image', fontweight = 'bold', fontsize = 20)
-            # plt.show()
+            # For every image keep track of the score
+            scores = []
 
-            # Threshold (Otsu)
-            img_array = np.where(img_array >= threshold_otsu(img_array), 255, 0)
-
-            # plt.matshow(img_array, cmap = matplotlib.cm.Greys_r)
-            # plt.axis('off')
-            # plt.title('Screenshot Image, Threshold', fontweight = 'bold', fontsize = 16)
-            # plt.show()
+            # Threshold (Otsu). Remove borders
+            img_array = np.where(img_array >= 0.9*threshold_otsu(img_array), 255, 0)[3:-3, 3:-3]
 
             # ... with every default image
             for img_name in images:
@@ -97,22 +94,21 @@ def image_comparison(img_items_list : list) -> list:
 
                 if test.size == 1600:
 
-                    # Threshold (Otsu) and Get number of equal pixels
-                    test = np.where(test >= threshold_otsu(test), 255, 0)
+                    # Threshold (Otsu) and Get number of equal pixels. Remove borders
+                    test = np.where(test >= 0.9*threshold_otsu(test), 255, 0)[3:-3, 3:-3]
 
                     missed = np.abs(test - img_array)
                     score = np.count_nonzero(missed) / img_array.size
+                    scores.append(score)
+                    img_names.append(img_name)
 
-                    # Set threshold (lower means similar, since the difference of two
-                    # identical images is zero.
-                    # WE STILL HAVE TO SAY WHAT HAPPENS IF 2 (or more) IMAGES ARE FOUND!!
+            # Lower threshold => more similar (it's a difference)
+            if np.min(scores) < 0.3:
 
-                    if score < 0.05:
-                        # plt.matshow(test, cmap = matplotlib.cm.Greys_r)
-                        # plt.axis('off')
-                        # plt.title('Default Image, Threshold', fontweight = 'bold', fontsize = 16)
-                        # plt.show()
-                        result.append(img_name[:-4])
+                # If two images have the same score we take the first one. Is it a problem? yes.
+                # Can this happen? don't know, I guess and hope not, it's not likely for sure.
+                img_position = np.where(scores == np.min(scores))[0][0]
+                result.append(img_names[img_position][:-4])
     except:
         pass
 
@@ -126,7 +122,8 @@ def item_recognizer() -> list:
     """
     Description
     -----------
-    Get the name of each object hold by the champion in game, by confronting the images with the default ones.
+    Get the name of each object hold by the champion in game,
+    by confronting the images with the default ones.
 
     Return
     ------
@@ -135,10 +132,10 @@ def item_recognizer() -> list:
     """
 
     # Analyze bunches: get screenshot, divide it in bunches and perform the comparison.
-    result = image_comparison(get_hold_items (_screen_acquisition()))
+    result = np.array(_image_comparison(_get_hold_items(_screen_acquisition())), dtype=object)
 
     if np.any(result):
-        # Get objects name (always a list)
+
         return result[result.nonzero()[0]]
 
     else:
