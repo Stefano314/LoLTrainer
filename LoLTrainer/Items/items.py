@@ -29,7 +29,8 @@ def _load_item(filename : str = 'items'):
     """
     Description
     -----------
-    Half way function to load .json files if they haven't been loaded already, otherwise recover their cached value.
+    Half way function to load .json files if they haven't been
+    loaded already, otherwise recover their cached value.
     At the moment the only file available is 'items.json'.
 
     """
@@ -117,7 +118,7 @@ def get_items(keys : list):
         return [LoLItems(name = keys)]
 
     else:
-        return [LoLItems(name = key) for key in keys]
+        return [LoLItems(name = key) for key in keys if key is not None]
 
 
 class LoLItems:
@@ -157,6 +158,7 @@ class LoLItems:
         Description
         -----------
         Conversion from PIL.Image object to numpy array.
+
         """
 
         image = _link_to_image(key = self.name)

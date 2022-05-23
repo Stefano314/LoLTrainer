@@ -41,6 +41,7 @@ class LoLChampions:
         # Additional stats
         self.lethality = 0
         self.armor_penetration = 0
+        self.magic_penetration = 0
         self.omnivamp = 0
         self.life_steal = 0
         self.gold = 0
