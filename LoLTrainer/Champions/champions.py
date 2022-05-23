@@ -65,7 +65,6 @@ class LoLChampions:
         return stats
 
 
-
     @property
     def items(self):
         """
@@ -115,19 +114,6 @@ class LoLChampions:
                         (self.lvl - 1) * (0.7025 + 0.0175 * (self.lvl - 1))
 
 
-    def update_champ(self) -> None:
-        """
-        Description
-        -----------
-        Re-evaluates all the stats of the champ.
-
-        """
-
-        self.level_up(self.lvl)
-        # self.item_upgrade(item_recognizer())
-        self.evaluate_stats()
-
-
     def remove_items(self, item : list) -> None:
         """
         Description
@@ -163,6 +149,8 @@ class LoLChampions:
             self.evaluate_stats()
         else:
             print("- WARNING: exceeding maximum number of items hold.")
+            pass
+
 
     def evaluate_stats(self):
         """
@@ -191,3 +179,15 @@ class LoLChampions:
         self.omnivamp += np.sum([item.omnivamp for item in self._items if isinstance(item, LoLItems)])
         self.life_steal += np.sum([item.life_steal for item in self._items if isinstance(item, LoLItems)])
 
+
+    def update_champ(self) -> None:
+        """
+        Description
+        -----------
+        Re-evaluates all the stats of the champ.
+
+        """
+
+        self.level_up(self.lvl)
+        self.item_upgrade(item_recognizer())
+        self.evaluate_stats()

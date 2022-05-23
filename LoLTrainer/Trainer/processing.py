@@ -3,6 +3,8 @@ import numpy as np
 from PIL import Image
 import os
 
+from skimage.filters import threshold_otsu
+
 # import matplotlib
 # import matplotlib.pyplot as plt
 
@@ -73,10 +75,18 @@ def image_comparison(img_items_list : list) -> list:
 
         # Compare each bunch ...
         for img_array in img_items_list:
-            # Threshold
 
-            img_array = np.where(img_array >= 90, 255, 0)
             # plt.matshow(img_array, cmap = matplotlib.cm.Greys_r)
+            # plt.axis('off')
+            # plt.title('Screenshot Image', fontweight = 'bold', fontsize = 20)
+            # plt.show()
+
+            # Threshold (Otsu)
+            img_array = np.where(img_array >= threshold_otsu(img_array), 255, 0)
+
+            # plt.matshow(img_array, cmap = matplotlib.cm.Greys_r)
+            # plt.axis('off')
+            # plt.title('Screenshot Image, Threshold', fontweight = 'bold', fontsize = 16)
             # plt.show()
 
             # ... with every default image
@@ -84,17 +94,24 @@ def image_comparison(img_items_list : list) -> list:
 
                 # Convert to numpy grayscale
                 test = np.array(Image.open(os.path.join(ITEMS_IMAGES_PATH, img_name)).convert("L"))
+
                 if test.size == 1600:
 
-                    # Get number of equal pixels
-                    test = np.where(test >= 100, 255, 0)
+                    # Threshold (Otsu) and Get number of equal pixels
+                    test = np.where(test >= threshold_otsu(test), 255, 0)
+
                     missed = np.abs(test - img_array)
                     score = np.count_nonzero(missed) / img_array.size
 
                     # Set threshold (lower means similar, since the difference of two
                     # identical images is zero.
                     # WE STILL HAVE TO SAY WHAT HAPPENS IF 2 (or more) IMAGES ARE FOUND!!
+
                     if score < 0.05:
+                        # plt.matshow(test, cmap = matplotlib.cm.Greys_r)
+                        # plt.axis('off')
+                        # plt.title('Default Image, Threshold', fontweight = 'bold', fontsize = 16)
+                        # plt.show()
                         result.append(img_name[:-4])
     except:
         pass
@@ -118,7 +135,8 @@ def item_recognizer() -> list:
     """
 
     # Analyze bunches: get screenshot, divide it in bunches and perform the comparison.
-    result = image_comparison(get_hold_items(_screen_acquisition()))
+    result = image_comparison(get_hold_items (_screen_acquisition()))
+
     if np.any(result):
         # Get objects name (always a list)
         return result[result.nonzero()[0]]
