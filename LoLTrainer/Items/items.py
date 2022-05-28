@@ -152,15 +152,19 @@ class LoLItems:
         self.life_steal = self._items_stats['life_steal']
         self.bonus = self._items_stats['BONUS']
 
-    @property
-    def item_image(self):
+
+    def item_image(self, png = False):
         """
         Description
         -----------
         Conversion from PIL.Image object to numpy array.
 
         """
-
         image = _link_to_image(key = self.name)
-        self._image = np.asarray(Image.open(image).convert("L"))
-        return self._image
+
+        if png:
+            return Image.open(image)
+
+        else:
+            self._image = np.asarray(Image.open(image).convert("L"))
+            return self._image
