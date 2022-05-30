@@ -24,13 +24,13 @@ def generate_champions_stats_template():
               'Taric', 'Teemo', 'Thresh', 'Tristana', 'Trundle', 'Tryndamere', 'Twisted Fate', 'Twitch',
               'Udyr', 'Urgot', 'Varus', 'Vayne', 'Veigar', "Vel'Koz", 'Vex', 'Vi', 'Viego', 'Viktor', 'Vladimir',
               'Volibear', 'Warwick', 'Wukong', 'Xayah', 'Xerath', 'Xin Zhao', 'Yasuo', 'Yone', 'Yorick',
-              'Yuumi', 'Zac', 'Zed', 'Zeri', 'Zeri', 'Zilean', 'Zoe', 'Zyra']
+              'Yuumi', 'Zac', 'Zed', 'Zeri', 'Ziggs', 'Zilean', 'Zoe', 'Zyra']
 
     def_stats = ["HP", "HP_growth", "mana", "mana_growth", "HP_regen", "HP_regen_growth", "mana_regen",
                  "mana_regen_growth", "physical_armor", "magical_armor", "tenacity"]
     off_stats = ["AD", "AP", "att_speed", "att_range", "AD_growth", "mov_speed", "crit_dmg", "crit_%", "AH"]
     generalities = ["nickname", "resource_type", "class", "position", "range_type"  "latest_patch"]
 
-    pd.DataFrame(0, index = def_stats, columns = champs).to_csv('champions_defensive_template.csv')
-    pd.DataFrame(0, index = off_stats, columns = champs).to_csv('champions_offensive_template.csv')
-    pd.DataFrame(0, index = generalities, columns = champs).to_csv('generalities_template.csv')
+    pd.DataFrame(0, index = def_stats, columns = champs).to_csv('defensive_attributes.csv')
+    pd.DataFrame(0, index = off_stats, columns = champs).to_csv('offensive_attributes.csv')
+    pd.DataFrame(0, index = generalities, columns = champs).to_csv('generalities.csv')
