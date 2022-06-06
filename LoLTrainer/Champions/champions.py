@@ -1,6 +1,10 @@
 import numpy as np
+import os
 
-from .ChampionsInfo.attributes import get_attributes, clear_cache
+import sys
+sys.path.insert(1, os.getcwd())
+
+from LoLTrainer.Champions.ChampionsInfo.attributes import get_attributes, clear_cache
 from LoLTrainer.Trainer.processing import item_recognizer
 from LoLTrainer.Items.items import get_items, LoLItems
 
@@ -34,6 +38,7 @@ class LoLChampions:
         self.HP = self._def_attributes['HP']
         self.AP = self._off_attributes['AP']
         self.AD = self._off_attributes['AD']
+        self.AS = self._off_attributes['att_speed']
         self.Ph_armor = self._def_attributes['physical_armor']
         self.Ma_armor = self._def_attributes['magical_armor']
         self.mana = self._def_attributes['mana']
@@ -60,7 +65,7 @@ class LoLChampions:
 
         """
 
-        stats = [self.lvl, self.HP, self.AP, self.AD, self.Ph_armor, self.Ma_armor, self.mana,
+        stats = [self.lvl, self.HP, self.AP, self.AD, self.AS, self.Ph_armor, self.Ma_armor, self.mana,
                  self.lethality, self.armor_penetration, self.omnivamp, self.life_steal, self.gold]
 
         return stats
@@ -108,6 +113,8 @@ class LoLChampions:
 
         self.AD = self._off_attributes['AD'] + self._off_attributes['AD_growth'] * \
                   (self.lvl - 1) * (0.7025 + 0.0175 * (self.lvl - 1))
+
+        self.AS = self._off_attributes['att_speed'] + self._off_attributes['att_speed_growth']*self._off_attributes['att_speed']*self.lvl
 
         if self.mana is not None:
 

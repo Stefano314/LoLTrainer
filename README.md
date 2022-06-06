@@ -23,8 +23,10 @@ How to Use
 ----------
 To do.
 
-Recognition Process
--------------------
+# Recognition Process
+
+## Items
+
 The procedure is very simple and straightforward. With the installer, we download all the 
 *items images* from [League of Legends Fandom Wiki](https://leagueoflegends.fandom.com/wiki/League_of_Legends_Wiki). 
 Thankfully, League of Legends has a solid structure overall, no exception for the items
