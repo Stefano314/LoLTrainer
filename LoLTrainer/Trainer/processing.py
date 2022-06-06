@@ -3,12 +3,16 @@ import numpy as np
 from PIL import Image
 import os
 
+import matplotlib.pyplot as plt
+
 from skimage.filters import threshold_otsu
 
 
 ITEMS_IMAGES_PATH = os.path.join(os.getcwd(), 'Images', 'Items', '')
+PROCESSING_PATH = os.path.join(os.getcwd(), 'LoLTrainer', 'Trainer', '')
 
-__all__ = ['item_recognizer']
+__all__ = ['item_recognizer', 'get_game_stats']
+
 
 def _screen_acquisition():
 
@@ -23,6 +27,56 @@ def _screen_acquisition():
         screen_array = np.array(screen_array)
 
     return screen_array
+
+
+def get_sword_icon_position(img : np.array, pattern : np.array) -> list:
+
+    """
+    Description
+    -----------
+    One-to-one comparison between a reference image (the sword icon between the team kills) and
+    the screen capture.
+    This function is meant to be executed when "tab" is pressed in game, so once the scoreboard
+    pops up.
+
+    Parameters
+    ----------
+    img : np.array
+        Numpy array containing the screen capture in gray scale.
+    pattern : np.array
+        Numpy array containing the reference image used to locate the tab window.
+
+    Notes
+    -----
+    The tab window is (row=465, cols=1158), and the reference image starts precisely at
+    after 26 rows and 570 columns.
+
+    Return
+    ------
+    list : List containing the tab box high left corner coordinates.
+
+    """
+    
+    img = np.where(img >= 0.9*threshold_otsu(img), 0, 255)
+    plt.matshow(img, cmap='gray')
+    plt.show()
+    # plt.matshow(pattern, cmap='gray')
+    # plt.show()
+
+    img_rows, img_cols = img.shape
+    pattern_rows, pattern_cols = pattern.shape
+
+    for row in range(img_rows-pattern_rows):
+
+        for col in range(img_cols-pattern_cols):
+
+            res = (img[row:row+pattern_rows, col:col+pattern_cols] == pattern).sum() 
+
+            if abs(res) > 0.9*pattern.size :
+        
+                return [row-26, col-570]
+
+    return None
 
 
 def _get_hold_items(screen: np.array) -> list:
@@ -116,6 +170,28 @@ def _image_comparison(img_items_list : list) -> list:
         result = [None] * 6
 
     return result
+
+
+def get_game_stats():
+    """
+    Description
+    -----------
+    Get the scoreboard and retrieve information from it.
+
+    """
+
+    img = _screen_acquisition()
+    tab_coordinates = get_sword_icon_position(img, np.load(PROCESSING_PATH+'sword_icon.npy'))
+
+    if isinstance(tab_coordinates, list):
+
+        print(img.shape)
+        print(tab_coordinates[0], tab_coordinates[1])
+        img = img[tab_coordinates[0]:tab_coordinates[0]+465, tab_coordinates[1]:tab_coordinates[1]+1158]
+
+    else:
+        print('WARNING: No info found')
+        return None
 
 
 def item_recognizer() -> list:
