@@ -36,21 +36,27 @@ class LoLChampions:
         self.name = name
         self.lvl = 1
         self.HP = self._def_attributes['HP']
+        self.HP_regen = self._def_attributes['HP_regen']
         self.AP = self._off_attributes['AP']
         self.AD = self._off_attributes['AD']
         self.AS = self._off_attributes['att_speed']
+        self.AR = self._off_attributes['att_range']
         self.Ph_armor = self._def_attributes['physical_armor']
         self.Ma_armor = self._def_attributes['magical_armor']
         self.mana = self._def_attributes['mana']
+        self.mana_regen = self._def_attributes['mana_regen']
+        self.MS = self._off_attributes['mov_speed']
 
         # Additional stats
         self.lethality = 0
+        self.crit_dmg = 1.75
+        self.crit_chance = 0
         self.armor_penetration = 0
         self.magic_penetration = 0
         self.omnivamp = 0
         self.life_steal = 0
         self.gold = 0
-
+        self.AH = 0
 
     @property
     def stats(self):
@@ -65,8 +71,33 @@ class LoLChampions:
 
         """
 
-        stats = [self.lvl, self.HP, self.AP, self.AD, self.AS, self.Ph_armor, self.Ma_armor, self.mana,
-                 self.lethality, self.armor_penetration, self.omnivamp, self.life_steal, self.gold]
+        stats = [self.lvl, self.HP, self.mana, self.AP, 
+                 self.AD, self.AS, self.AR, self.MS, self.AH,
+                 self.Ph_armor, self.Ma_armor,
+                 self.lethality, self.armor_penetration, self.magic_penetration,
+                 self.crit_dmg, self.crit_chance, self.omnivamp, 
+                 self.life_steal, self.gold]
+
+        print(f"""
+        - level: {stats[0]},
+        - HP: {stats[1]},
+        - AP: {stats[3]},
+        - AD: {stats[4]},
+        - attack speed: {stats[5]},
+        - attack range: {stats[6]},
+        - movement speed: {stats[7]},
+        - ability haste: {stats[8]},
+        - physical armor: {stats[9]},
+        - magic resistance: {stats[10]},
+        - lethality: {stats[11]},
+        - armor penetration: {stats[12]},
+        - magic_penetration: {stats[13]},
+        - critical damage: {stats[14]},
+        - critical %: {stats[15]},
+        - omnivamp: {stats[16]},
+        - life steal: {stats[17]},
+        - gold: {stats[18]}
+        """)
 
         return stats
 
@@ -111,14 +142,18 @@ class LoLChampions:
         self.HP = self._def_attributes['HP'] + self._def_attributes['HP_growth'] * \
                   (self.lvl - 1) * (0.7025 + 0.0175 * (self.lvl - 1))
 
+        self.HP_regen = self._def_attributes['HP_regen'] + self._def_attributes['HP_regen_growth'] * \
+                  (self.lvl - 1) * (0.7025 + 0.0175 * (self.lvl - 1))
+
         self.AD = self._off_attributes['AD'] + self._off_attributes['AD_growth'] * \
                   (self.lvl - 1) * (0.7025 + 0.0175 * (self.lvl - 1))
 
         self.AS = self._off_attributes['att_speed'] + self._off_attributes['att_speed_growth']*self._off_attributes['att_speed']*self.lvl
 
-        if self.mana is not None:
+        self.mana = self._def_attributes['mana'] + self._def_attributes['mana_growth'] * \
+                        (self.lvl - 1) * (0.7025 + 0.0175 * (self.lvl - 1))
 
-            self.mana = self._def_attributes['mana'] + self._def_attributes['mana_growth'] * \
+        self.mana_regen = self._def_attributes['mana_regen'] + self._def_attributes['mana_regen_growth'] * \
                         (self.lvl - 1) * (0.7025 + 0.0175 * (self.lvl - 1))
 
 
