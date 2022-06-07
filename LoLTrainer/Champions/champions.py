@@ -138,7 +138,6 @@ class LoLChampions:
         else:
             self.lvl = lvl
 
-        # For now missing regens scaling
         self.HP = self._def_attributes['HP'] + self._def_attributes['HP_growth'] * \
                   (self.lvl - 1) * (0.7025 + 0.0175 * (self.lvl - 1))
 
