@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-import sv_ttk
+# import sv_ttk
 from PIL import ImageTk, Image
 
 class App(ttk.Frame):

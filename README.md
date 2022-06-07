@@ -23,8 +23,10 @@ How to Use
 ----------
 To do.
 
-Recognition Process
--------------------
+# Recognition Process
+
+## Items
+
 The procedure is very simple and straightforward. With the installer, we download all the 
 *items images* from [League of Legends Fandom Wiki](https://leagueoflegends.fandom.com/wiki/League_of_Legends_Wiki). 
 Thankfully, League of Legends has a solid structure overall, no exception for the items
@@ -66,9 +68,17 @@ the screenshot acquisition, which produces an image a bit different from the *de
 as we can see. However, this difference is so small that can easily be compensated with 
 the *score parameter*.
 
+## Scoreboard
+Similarly to what we has been done with the items, the Trainer recognizes if the **scoreboard** is open if it manages to find a known pattern, namely a *"sword icon"*. <img style="float: right; padding-right: 50px; padding-left: 50px; padding-top: 20px;" src="https://user-images.githubusercontent.com/79590448/172323572-4de4844d-ac97-431c-b20f-5396287e3302.png" alt="drawing" width="170">  
+The reason why that icon has been chosen is simply because empirically I noticed that from the total screen capture, once *thresholded*, that was the most robust reoccurring structure in the scoreboard. In the image we see the chosen pattern, which has a 20x20 format. Once we are able to recognize exactly where that pattern is located, we can **infer** the position of the total scoreboard thanks its relative position with the *sword icon*.
 
-Citing
-------
+The recognition process in this case requires a bit more time consuming, since it has to count the *number of different pixels* in every (20x20) portion of the toatal image - starting from the top left corner - compared to the *sword icon*. However, it stops immediately once it is able to find a pattern that is **similar enough** (the threshold can be changed); the good thing is that the sword icon pattern is so robust to the point where we can set the threshold to a value which basically always finds the correct match. The result is shown below.
+
+<img style="float: center; padding-right: 50px; padding-left: 50px; padding-top: 30px; padding-bottom: 30px;" src="https://user-images.githubusercontent.com/79590448/172334207-38a7f3e6-04ff-42ce-a176-a0dabbbe8183.png" alt="drawing" width="600"> 
+
+
+# Citing
+
 If you enjoyed using **LoLTrainer**, please consider sharing it! (I Guess it will take a 
 while before you'll enjoy using it :D)
 ```

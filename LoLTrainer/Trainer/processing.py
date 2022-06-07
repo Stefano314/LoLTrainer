@@ -3,8 +3,6 @@ import numpy as np
 from PIL import Image
 import os
 
-import matplotlib.pyplot as plt
-
 from skimage.filters import threshold_otsu
 
 
@@ -58,10 +56,6 @@ def get_sword_icon_position(img : np.array, pattern : np.array) -> list:
     """
     
     img = np.where(img >= 0.9*threshold_otsu(img), 0, 255)
-    plt.matshow(img, cmap='gray')
-    plt.show()
-    # plt.matshow(pattern, cmap='gray')
-    # plt.show()
 
     img_rows, img_cols = img.shape
     pattern_rows, pattern_cols = pattern.shape
@@ -181,12 +175,11 @@ def get_game_stats():
     """
 
     img = _screen_acquisition()
+
     tab_coordinates = get_sword_icon_position(img, np.load(PROCESSING_PATH+'sword_icon.npy'))
 
     if isinstance(tab_coordinates, list):
-
-        print(img.shape)
-        print(tab_coordinates[0], tab_coordinates[1])
+        
         img = img[tab_coordinates[0]:tab_coordinates[0]+465, tab_coordinates[1]:tab_coordinates[1]+1158]
 
     else:
@@ -207,7 +200,7 @@ def item_recognizer() -> list:
 
     """
 
-    # Analyze bunches: get screenshot, divide it in bunches and perform the comparison.
+    # Analyze batches: get screenshot, divide it in batches and perform the comparison.
     result = np.array(_image_comparison(_get_hold_items(_screen_acquisition())), dtype=object)
 
     if np.any(result):
