@@ -1,4 +1,4 @@
-import json
+import pandas as pd
 import os
 from PIL import Image
 import numpy as np
@@ -6,10 +6,10 @@ import numpy as np
 
 __all__ = ['LoLItems', 'get_items']
 
-INFO_PATH = os.path.join(os.getcwd(), 'LoLTrainer', 'Items', '')
+ITEMS_PATH = os.path.join(os.getcwd(), 'LoLTrainer', 'Items', '')
 ITEMS_IMAGES_PATH = os.path.join(os.getcwd(), 'Images', 'Items', '')
 
-# Cache global variable for .json
+# Cache global variable for .csv
 _cache = dict()
 
 
@@ -25,20 +25,21 @@ def clear_cache(key):
         _cache.pop(key)
 
 
-def _load_item(filename : str = 'items'):
+def _load_items(filename : str = 'items'):
     """
     Description
     -----------
-    Half way function to load .json files if they haven't been
+    Half way function to load .csv files if they haven't been
     loaded already, otherwise recover their cached value.
-    At the moment the only file available is 'items.json'.
+    At the moment the only file available is 'items.csv'.
 
     """
 
     key = filename
+
     if key not in _cache:
-        with open(INFO_PATH+filename+'.json') as file:
-            _cache[key] = json.load(file)
+
+        _cache[key] = pd.read_csv(ITEMS_PATH+filename+'.csv', index_col=0)
 
     return _cache[key]
 
@@ -47,24 +48,24 @@ def _get_item(key : str, filename : str = 'items'):
     """
     Description
     -----------
-    Load the .json file according to the value expressed in 'file_category'.
-    Then it recovers the information required by the user from that file.
+    Load the items.csv file and recovers the information required by the user from that file.
 
     Parameters
     ----------
     key : str
-        Selects the entry in the .json file, which correspond to a single specific item.
+        Selects the entry in the items.csv file, which correspond to a single specific item.
+
     filename :str
-        Name of the .json file. At the moment we only have 'items.json'.
+        Name of the items.csv file. At the moment there is only 'items.csv'.
 
     Return
     ------
-    dict : The items dictionary that will be used in items class to generate the object.
+    pd.DataFrame : The item row that will be used in items class to generate the object.
 
     """
 
-    items = _load_item(filename)
-    return items.get(key)
+    items = _load_items(filename)
+    return items.loc[items['Item'] == key]
 
 
 def _link_to_image(key : str) -> str:
@@ -138,7 +139,7 @@ class LoLItems:
         self._image = None
 
         # PUBLIC:
-        self.name = self._items_stats['name']
+        self.name = self._items_stats['Item']
         self.gold = self._items_stats['gold']
         self.HP = self._items_stats['HP']
         self.AP = self._items_stats['AP']
@@ -150,7 +151,7 @@ class LoLItems:
         self.armor_penetration = self._items_stats['armor_penetration']
         self.omnivamp = self._items_stats['omnivamp']
         self.life_steal = self._items_stats['life_steal']
-        self.bonus = self._items_stats['BONUS']
+        # self.bonus = self._items_stats['BONUS']
 
 
     def item_image(self, png = False):
