@@ -57,7 +57,8 @@ class LoLChampions:
         self.life_steal = 0
         self.gold = 0
         self.AH = 0
-
+        self.hsp = 0 # Heal Shield Power
+        
     @property
     def stats(self):
         """
