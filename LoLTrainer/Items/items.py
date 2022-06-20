@@ -141,16 +141,31 @@ class LoLItems:
         # PUBLIC:
         self.name = self._items_stats['Item']
         self.gold = self._items_stats['gold']
+
         self.HP = self._items_stats['HP']
         self.AP = self._items_stats['AP']
         self.AD = self._items_stats['AD']
+        self.AS = self._items_stats['AS']
+        self.AH = self._items_stats['AH']
+        self.mana = self._items_stats['mana']
+
         self.Ph_armor = self._items_stats['physical_armor']
         self.Ma_armor = self._items_stats['magical_armor']
-        self.mana = self._items_stats['mana']
+
+        self.mana_regen = self._items_stats['mana_regen']
+        self.HP_regen = self._items_stats['HP_regen']
+
+        self.crit_chance = self._items_stats['critical_chance']
+    
         self.lethality = self._items_stats['lethality']
         self.armor_penetration = self._items_stats['armor_penetration']
+        self.magic_penetration = self._items_stats['magic_penetration']
+
         self.omnivamp = self._items_stats['omnivamp']
         self.life_steal = self._items_stats['life_steal']
+        self.hsp = self._items_stats['hsp']
+
+        self.Maps = self._items_stats['Maps']
         # self.bonus = self._items_stats['BONUS']
 
 
