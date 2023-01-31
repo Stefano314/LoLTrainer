@@ -10,11 +10,21 @@ def update_game():
     Run this script everytime a new League of Legends game update is released.
     """
 
+    print("- Retrieving champions stats from 'leagueoflegends.fandom.com' ...")
     generate_champions_stats_template()
+
+    print("- Retrieving items stats from 'leagueoflegends.fandom.com' ...")
     generate_items_template()
+
+    print("- Downloading items images from 'leagueoflegends.fandom.com' ...")
     get_item_images()
+    
+    print("Compleated!")
 
 
 def generate_templates():
 
+    print("- Generating ability template for all champions ...")
     generate_abilities_template()
+    
+    print("Compleated!")

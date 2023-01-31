@@ -10,10 +10,7 @@ def get_item_images():
     images_links = [i for i in site_content if i.startswith("https://static.wikia.nocookie")]
     images_names = [i.split('/') for i in images_links]
 
-    print("- Downloading items images from 'leagueoflegends.fandom.com' ...")
-
     # Save items names in list
-
     for i in range(len(images_links)):
 
         try:
@@ -29,5 +26,3 @@ def get_item_images():
 
         except:
             pass
-
-    print(f"Completed!\nImages saved in {ITEM_IMAGES_PATH}")
