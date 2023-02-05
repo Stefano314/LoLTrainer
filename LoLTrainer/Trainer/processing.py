@@ -98,7 +98,7 @@ def _get_hold_items(screen: np.array) -> list:
     return [screen[947 + y:987 + y, 1131 + x:1171 + x] for y in y_step for x in x_step]
 
 
-def _image_comparison(img_items_list : list) -> list:
+def _image_comparison(img_items_list : list, neural_network = True) -> list:
     """
     Description
     -----------
@@ -109,61 +109,86 @@ def _image_comparison(img_items_list : list) -> list:
     img_items_list : list
         List containing the array bunches obtained from '_get_hold_items()' function.
 
+    neural_network : bool
+        Specify the recognition technique. If True, it will use the neural network
+        trained model, else it will use a direct one-to-one image comparison.
+
     Return
     ------
     list : List with the items names found, if they exist.
 
     """
 
-    result = []
+    if neural_network:
 
-    # Must use img_names because some files are not recognized, so the position shifts
-    img_names = []
+        import tensorflow as tf
+        model = tf.keras.models.load_model('item_recognition_25epochs.h5') # Load model
 
-    # .png files in dir
-    images = [img for img in os.listdir(ITEMS_IMAGES_PATH) if img.endswith('.png')]
+        image_names = [] # Image names with 40x40 resolution
+        for img in [img for img in os.listdir(ITEMS_IMAGES_PATH) if img.endswith('.png')]:
+            if np.array(Image.open(os.path.join(ITEMS_IMAGES_PATH, img)).convert('L')).shape == (40,40):
+                image_names.append(img)
 
-    try:
-
-        # Compare each bunch ...
+        result = [] # Will store the item names
         for img_array in img_items_list:
 
-            # For every image keep track of the score
-            scores = []
+            img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
 
-            # Threshold (Otsu). Remove borders
-            img_array = np.where(img_array >= 0.9*threshold_otsu(img_array), 255, 0)[3:-3, 3:-3]
+            prediction = model.predict(img_array) # Perform the image analysis
+            result.append(image_names[np.argmax(prediction)]) # Give the most probable result
 
-            # ... with every default image
-            for img_name in images:
+        return result
 
-                # Convert to numpy grayscale
-                test = np.array(Image.open(os.path.join(ITEMS_IMAGES_PATH, img_name)).convert("L"))
+    else:
+        result = []
 
-                if test.size == 1600:
+        # Must use img_names because some files are not recognized, so the position shifts
+        img_names = []
 
-                    # Threshold (Otsu) and Get number of equal pixels. Remove borders
-                    test = np.where(test >= 0.9*threshold_otsu(test), 255, 0)[3:-3, 3:-3]
+        # .png files in dir
+        images = [img for img in os.listdir(ITEMS_IMAGES_PATH) if img.endswith('.png')]
 
-                    missed = np.abs(test - img_array)
-                    score = np.count_nonzero(missed) / img_array.size
-                    scores.append(score)
-                    img_names.append(img_name)
+        try:
 
-            # Lower threshold => more similar (it's a difference)
-            if np.min(scores) < 0.3:
+            # Compare each bunch ...
+            for img_array in img_items_list:
 
-                # If two images have the same score we take the first one. Is it a problem? yes.
-                # Can this happen? don't know, I guess and hope not, it's not likely for sure.
-                img_position = np.where(scores == np.min(scores))[0][0]
-                result.append(img_names[img_position][:-4])
-    except:
-        pass
+                # For every image keep track of the score
+                scores = []
 
-    if len(result) == 0:
-        result = [None] * 6
+                # Threshold (Otsu). Remove borders
+                img_array = np.where(img_array >= 0.9*threshold_otsu(img_array), 255, 0)[3:-3, 3:-3]
 
-    return result
+                # ... with every default image
+                for img_name in images:
+
+                    # Convert to numpy grayscale
+                    test = np.array(Image.open(os.path.join(ITEMS_IMAGES_PATH, img_name)).convert("L"))
+
+                    if test.size == 1600:
+
+                        # Threshold (Otsu) and Get number of equal pixels. Remove borders
+                        test = np.where(test >= 0.9*threshold_otsu(test), 255, 0)[3:-3, 3:-3]
+
+                        missed = np.abs(test - img_array)
+                        score = np.count_nonzero(missed) / img_array.size
+                        scores.append(score)
+                        img_names.append(img_name)
+
+                # Lower threshold => more similar (it's a difference)
+                if np.min(scores) < 0.3:
+
+                    # If two images have the same score we take the first one. Is it a problem? yes.
+                    # Can this happen? don't know, I guess and hope not, it's not likely for sure.
+                    img_position = np.where(scores == np.min(scores))[0][0]
+                    result.append(img_names[img_position][:-4])
+        except:
+            pass
+
+        if len(result) == 0:
+            result = [None] * 6
+
+        return result
 
 
 def get_game_stats():
