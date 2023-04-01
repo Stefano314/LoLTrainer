@@ -24,6 +24,12 @@ How to Use
 To do.
 
 # Recognition Process
+# **New**
+Added a neural network model trained to recognize the items according to the ones available. Since the images are small $(40\times40)$ the training time required is quite small.
+At the moment it is a dense neural network, not a convolutional one, trained and tested on the same dataset - in particular, the one obtained from the $\verb|images_downloader.py|$ file. This because the images are always the same, and since they are small it is possible to work directly with a dense neural network. However, it could be better to implement a convolutional neural network in order to have more flexibility in terms of tabs and object positions, but in that case a proper training/testing dataset is required. 
+
+## **- Consequences**
+This new approach replaces entirely the binary image recognition process presented below. It is still implemented, since it remains a reliable method that does not require any training model, but once the neural network implementation is concluded, the old one should be entirely replaced. 
 
 ## Items
 
